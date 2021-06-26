@@ -264,7 +264,7 @@ sub _parseChunk {
 		$props->{childCount} = $1;
 	}
 
-	if ( $node =~ m{<res[^>]*>([^<]+)</res>} ) {
+	if ( $node =~ m{<res[^>]*protocolInfo="http-get[^>]*>([^<]+)</res>} ) {
 		$url = $1;
 		
 		# If the UPnP server is running on the same PC as the server, URL may be localhost
